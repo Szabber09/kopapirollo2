@@ -37,9 +37,25 @@ function megjelenit(){
     
 }
 
-function kivalaszt(){
+function kivalaszt(event){
   const kep=document.querySelector("#jatekos img")
   console.log(kep)
   console.log(event.target.id)
-  kep.src="kepek/ko.png"
+  kep.src=`kepek/${event.target.id}.PNG`
+  gepvalasztas(event.target.id)
+}
+const tipplista=["ko","papir","ollo"]
+function gepvalasztas(jValasztasa){
+  const kep=document.querySelector("#gep img")
+  console.log(kep)
+  let veletlen=Math.floor(Math.random()*3)
+  console.log(veletlen)
+  let gepTipp=tipplista[veletlen]
+  kep.src=`kepek/${gepTipp}.PNG`
+  ellenorzes(veletlen,jValasztasa)
+}
+
+function ellenorzes(veletlen, jValasztasa){
+  let f1 = 
+
 }
